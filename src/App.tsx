@@ -3,7 +3,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./com
 import { Button } from "./components/ui/button";
 import Field from "./Field";
 
-// Define the type for components
 type Component = {
   id: number;
   name: string;
@@ -12,12 +11,10 @@ type Component = {
 };
 
 function App() {
-  // Initialize state with `name`, `grade`, and `units`
-  const [components, setComponents] = useState<Component[]>([
+    const [components, setComponents] = useState<Component[]>([
     { id: 0, name: "", grade: "", units: "" },
   ]);
 
-  // Add a new course component
   const handleAddComponent = () => {
     setComponents([
       ...components,
@@ -25,12 +22,10 @@ function App() {
     ]);
   };
 
-  // Clear all components
   const handleClearComponents = () => {
     setComponents([]);
   };
 
-  // Calculate GPA
   const handleCalculateGPA = () => {
     if (components.length === 0) {
       alert("Please add at least one course to calculate GPA.");
