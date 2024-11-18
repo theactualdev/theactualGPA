@@ -16,7 +16,7 @@ interface Props {
     units: string;
     name: string;
   };
-  updateField: (updatedField: { grade?: string; units?: string }) => void;
+  updateField: (updatedField: { grade?: string; units?: string; name?: string }) => void;
 }
 
 function Field({ id, data, updateField }: Props) {
