@@ -47,7 +47,7 @@ function App() {
             <p>Credits</p>
           </div>
           <div className="fields flex flex-col gap-4">
-            {components.map((comp, index) => (
+            {components.map((comp) => (
               <Field
                 key={comp.id}
                 id={comp.id}
