@@ -14,7 +14,6 @@ interface Props {
   data: {
     grade: string;
     units: string;
-    name: string;
   };
   updateField: (updatedField: { grade?: string; units?: string }) => void;
 }
@@ -25,7 +24,7 @@ function Field({ id, data, updateField }: Props) {
       <Input
         className="w-full"
         placeholder="Course Name?"
-        value={data.name || ""}
+        value={""}
         onChange={(e) => updateField({ name: e.target.value })}
       />
       <Select value={data.grade} onValueChange={(value) => updateField({ grade: value })}>
