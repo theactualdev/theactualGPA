@@ -24,13 +24,13 @@ function Field({ id, data, updateField }: Props) {
     <div className="row flex gap-4" key={id}>
       <Input
         className="w-full"
-        placeholder="Course Name?"
+        placeholder="Course Name"
         value={data.name || ""}
         onChange={(e) => updateField({ name: e.target.value })}
       />
       <Select value={data.grade} onValueChange={(value) => updateField({ grade: value })}>
-        <SelectTrigger className="w-1/2">
-          <SelectValue placeholder={"Your Grade?"} />
+        <SelectTrigger className="w-1/4">
+          <SelectValue placeholder={"Grade"} />
         </SelectTrigger>
         <SelectContent>
           <SelectGroup>
@@ -46,7 +46,7 @@ function Field({ id, data, updateField }: Props) {
       </Select>
       <Input
         className="w-1/2"
-        placeholder="Units?"
+        placeholder="Units"
         value={data.units}
         onChange={(e) => updateField({ units: e.target.value })}
       />

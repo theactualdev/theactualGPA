@@ -52,7 +52,7 @@ function App() {
 
   return (
     <div className="wrapper w-full flex flex-col gap-16 items-center justify-center h-screen">
-      <Card className="w-[450px]">
+      <Card className="w-[400px] md:w-[450px]">
         <CardHeader>
           <CardTitle>Calculate your GPA!</CardTitle>
           <CardDescription>
@@ -69,7 +69,7 @@ function App() {
             {components.length > 0 ? (
               components.map((comp) => (
                 <Field
-                  key={comp.id} // Set `key` here
+                  key={comp.id}
                   id={comp.id}
                   data={comp}
                   updateField={(updatedField) =>
